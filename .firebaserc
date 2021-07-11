@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "videojuegos-87253": {
+      "hosting": {
+        "FireGames": [
+          "videojuegos-87253"
+        ]
+      }
+    }
+  }
+}

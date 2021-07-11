@@ -1,0 +1,84 @@
+<div class="container mt-3 animated fadeIn fast">
+  <h1>Formulario para {{titulo}} </h1>
+  <hr>
+
+<div class="row">
+    <div class="col text-end">
+      <button class="btn btn-danger" routerLink="/lista-de-juegos">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        Regresar
+      </button>
+    </div>
+  </div>
+
+<form autocomplete="off" [formGroup]="forma" (ngSubmit)="guardar()">
+    <!-- nombre -->
+    <div class="form-group">
+      <label class="col-2 col-form-label">Nombre del juego</label>
+      <div class="col-8">
+
+        <input class="form-control" type="text" placeholder="Ingrese el nombre del juego" formControlName="Nombre"
+          [class]="esValido('Nombre')">
+        <div *ngIf="esValido('Nombre')=='is-invalid';else valido" class="invalid-feedback">
+          Ingrese al menos 4 letras
+        </div>
+        <ng-template #valido>
+          <div class="valid-feedback">validacion correcta</div>
+        </ng-template>
+      </div>
+    </div>
+    <!-- creadoPor -->
+    <div class="form-group">
+      <label class="col-2 col-form-label">Nombre del creador</label>
+      <div class="col-8">
+
+        <input class="form-control" type="text" placeholder="Ingrese el nombre del creador" formControlName="CreadoPor"
+          [class]="esValido('CreadoPor')">
+        <div *ngIf="esValido('CreadoPor')=='is-invalid';else valido" class="invalid-feedback">
+          Ingrese al menos 4 letras
+        </div>
+        <ng-template #valido>
+          <div class="valid-feedback">validacion correcta</div>
+        </ng-template>
+      </div>
+    </div>
+    <!-- Descripcion -->
+    <div class="form-group">
+      <label class="col-2 col-form-label">Descrición</label>
+      <div class="col-8">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+          placeholder="Ingrese la descripción del juego" formControlName="Descripcion"
+          [class]="esValido('Descripcion')"></textarea>
+            <div *ngIf="esValido('Descripcion')=='is-invalid';else valido" class="invalid-feedback">
+              Ingrese al menos 4 letras
+            </div>
+            <ng-template #valido> 
+              <div class="valid-feedback">
+                validacion correcta
+              </div> 
+            </ng-template>
+        
+        </div>
+      </div> 
+       <!-- imagen url de portada -->
+     <div class="form-group">
+      <label class="col-5 col-form-label">Url de la imagen de portada</label>
+      <div class="col-8">    
+        <input class="form-control" type="text" placeholder="Ingrese la url de la imagen" formControlName="imagenUrl"
+        [class]="esValido('imagenUrl')">
+        <div *ngIf="esValido('imagenUrl')=='is-invalid';else valido" class="invalid-feedback">
+          Ingrese al menos 4 letras
+        </div>
+        <ng-template #valido> <div class="valid-feedback">validacion correcta</div> </ng-template>
+      </div>
+    </div> 
+      <!-- boton de formulario -->
+      <hr>
+      <div class="form-group text-center">
+          <button type="submit" class="btn btn-outline-primary">
+            <i class="fas fa-save"></i>
+            Guardar
+          </button>
+      </div>
+    </form>
+  </div>
