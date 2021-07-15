@@ -64,12 +64,14 @@
      <div class="form-group">
       <label class="col-5 col-form-label">Url de la imagen de portada</label>
       <div class="col-8">    
-        <input class="form-control" type="text" placeholder="Ingrese la url de la imagen" formControlName="imagenUrl"
+        <input class="form-control " type="text" placeholder="Ingrese la url de la imagen" formControlName="imagenUrl"
         [class]="esValido('imagenUrl')">
         <div *ngIf="esValido('imagenUrl')=='is-invalid';else valido" class="invalid-feedback">
           Ingrese al menos 4 letras
         </div>
-        <ng-template #valido> <div class="valid-feedback">validacion correcta</div> </ng-template>
+        <ng-template #valido> 
+          <div class="valid-feedback">validacion correcta</div> 
+        </ng-template>
       </div>
     </div> 
       <!-- boton de formulario -->

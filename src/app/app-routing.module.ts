@@ -4,9 +4,8 @@ import { InicioComponent } from "./componentes/inicio/inicio.component";
 import { ListaJuegosComponent } from "./componentes/lista-juegos/lista-juegos.component";
 import { NuevoJuegoComponent } from "./componentes/nuevo-juego/nuevo-juego.component";
 import { AboutComponent } from "./componentes/about/about.component";
-// import { ReactivoComponent } from './compartido/formularios/reactivo/reactivo.component';
 import { EditarJuegoComponent } from './componentes/editar-juego/editar-juego.component';
-import { GuardService } from './servicios/guard.service';
+// import { GuardService } from './servicios/guard.service';
 
 const ROUTES: Routes = [
   {path: 'inicio',component:InicioComponent },
@@ -14,7 +13,6 @@ const ROUTES: Routes = [
   {path: 'nuevo-juego',component:NuevoJuegoComponent},
   {path: 'editar-juego',component:EditarJuegoComponent },
   {path: 'about',component:AboutComponent },
-  // {path: 'formularioReactivo',component:ReactivoComponent },
   {path: '**', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

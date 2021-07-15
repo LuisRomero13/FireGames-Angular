@@ -1,7 +1,7 @@
 <div class="container mt-3 animated fadeIn fast">
   <h1>Listado de juegos</h1>
   <hr>
-
+<!-- boton agregar -->
   <div class="row">
     <div class="col text-end">
       <button class="btn btn-primary" routerLink="/nuevo-juego">
@@ -10,7 +10,7 @@
       </button>
     </div>
   </div>
-
+<!-- tabla de juegos -->
   <table class="table table-primary mt-3 table-borderless">
     <thead>
       <tr>
@@ -27,7 +27,6 @@
       <th scope="row">{{i+1}}</th>
       <td>{{item.Nombre}}</td>
       <td>{{item.CreadoPor}}</td>
-      <!-- <td><a routerLink="/about/{{item.id}}"> Leer más... </a></td> -->
       <td> <button type="button" class="btn btn-outline-primary" (click)="aboutJuego(item)">Leer más...</button> </td>
       <td> <button class="btn btn-info" type="button" (click)="editarJuego(item)"> <i class="fa fa-highlighter"></i> </button> </td>
       <td> <button class="btn btn-danger" type="button" (click)="eliminar(item)"> <i class="fa fa-regular fa-trash-o"></i> </button> </td>

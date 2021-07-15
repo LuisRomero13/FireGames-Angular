@@ -1,3 +1,7 @@
+## Cosas a mejorar
+
+Agregar la funcionalidad Guard y al buscador de juegos en la barra de navegacion, redirigir a la lista de juegos cuando se ingresa a 'about' y a 'editar-juego'directamente, interfaz fuera del servicio y arreglar footer.
+
 # FireGames
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.

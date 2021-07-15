@@ -15,12 +15,12 @@ export interface Juego{
 })
 export class ConexionService {
   private itemsCollection: AngularFirestoreCollection<Juego>;
-  items: Observable<Juego[]>;
+  items$: Observable<Juego[]>;
   private itemDoc: AngularFirestoreDocument<Juego>;
 
   constructor(private afs: AngularFirestore) {
     this.itemsCollection = afs.collection<Juego>('items');
-    this.items = this.itemsCollection.snapshotChanges().pipe(
+    this.items$ = this.itemsCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as Juego;
         data.id = a.payload.doc.id;
@@ -32,7 +32,7 @@ export class ConexionService {
     this.itemsCollection.add(item);
   }
   listaJuegos(){
-    return this.items;
+    return this.items$;
   }
   eliminarJuego(item:Juego){
     this.itemDoc= this.afs.doc<Juego>(`/items/${item.id}`);

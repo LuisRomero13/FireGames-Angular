@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { ConexionService,Juego } from 'src/app/servicios/conexion.service';
 import { NavigationExtras, Router } from '@angular/router';
 import Swal from 'sweetalert2';
@@ -17,10 +16,12 @@ export class ListaJuegosComponent implements OnInit {
     }
   };
   items!: Juego[];
+
   constructor(private router: Router,private _conexion:ConexionService) { 
     this._conexion.listaJuegos().subscribe(juego=>{
       this.items=juego;
     });
+    
   }
 
   ngOnInit(): void {

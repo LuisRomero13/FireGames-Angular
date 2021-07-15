@@ -17,11 +17,9 @@ import { NuevoJuegoComponent } from './componentes/nuevo-juego/nuevo-juego.compo
 import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { AboutComponent } from './componentes/about/about.component';
-import { ReactivoComponent } from './compartido/formularios/reactivo/reactivo.component';
-import { ValidadoresService } from "./compartido/formularios/reactivo/validadores.service";
 import { FormFireComponent } from './compartido/form-fire/form-fire.component';
 import { EditarJuegoComponent } from './componentes/editar-juego/editar-juego.component';
-import { GuardService } from './servicios/guard.service';
+// import { GuardService } from './servicios/guard.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +29,6 @@ import { GuardService } from './servicios/guard.service';
     HeaderComponent,
     FooterComponent,
     AboutComponent,
-    ReactivoComponent,
     FormFireComponent,
     EditarJuegoComponent
   ],
@@ -42,7 +39,7 @@ import { GuardService } from './servicios/guard.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ConexionService,ValidadoresService,GuardService ],
+  providers: [ConexionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

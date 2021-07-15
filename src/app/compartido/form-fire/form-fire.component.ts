@@ -63,7 +63,7 @@ export class FormFireComponent implements OnInit {
       }
       else{      
         const Id=this.juego.id;
-      this.juego=this.forma.value;
+        this.juego=this.forma.value;
         this.juego.id=Id;
         this._conexion.actualizarJuego(this.juego);
         Swal.fire(
