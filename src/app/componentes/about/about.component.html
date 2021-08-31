@@ -1,29 +1,31 @@
-<div class="container mt-3 animated fadeIn fast" >
- 
-    <div class="row">
-      <div class="col text-end">
-        <button class="btn btn-danger" routerLink="/lista-de-juegos">
-          <i class="fa fa-arrow-left" aria-hidden="true"></i>
-          Regresar
-        </button>
-      </div>
-    </div>
-
-    <div class="card border-primary mb-3 mt-3" style="max-width: 100%;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src= {{juegoCompleto.imagenUrl}} class="img-fluid rounded-start" alt="...">
+<main>
+  <div class="container mt-3 animated fadeIn fast" >
+   
+      <div class="row">
+        <div class="col text-end">
+          <button class="btn btn-danger" routerLink="/lista-de-juegos">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            Regresar
+          </button>
         </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title text-warning">{{juegoCompleto.Nombre}} </h5>
-            <p class="card-text text-primary"> {{juegoCompleto.Descripcion}} </p>
-                <p class="card-text">  
-                  <span class="text-danger">Creador:</span> 
-                  <span class="text-success"> {{juegoCompleto.CreadoPor}} </span>
-                </p>
+      </div>
+  
+      <div class="card border-primary mb-3 mt-3" style="max-width: 100%;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src= {{juegoCompleto.imagenUrl}} class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title text-warning">{{juegoCompleto.Nombre}} </h5>
+              <p class="card-text text-primary"> {{juegoCompleto.Descripcion}} </p>
+                  <p class="card-text">  
+                    <span class="text-danger">Creador:</span> 
+                    <span class="text-success"> {{juegoCompleto.CreadoPor}} </span>
+                  </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-</div>
+  </div>
+</main>

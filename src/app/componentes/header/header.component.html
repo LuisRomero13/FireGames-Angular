@@ -1,23 +1,25 @@
-<!-- barra de navegacion -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <img src="favicon.ico" alt="" width="30" height="24">
-    <a class="navbar-brand">FireGames</a>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item" >
-          <a class="nav-link " [routerLink]="['inicio']"  [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " [routerLink]="['lista-de-juegos']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Lista de juegos</a>
-        </li>
-      </ul>
-      <!-- Buscador de juegos -->
-      <!-- <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Buscar juego" aria-label="Search">
-        <button class="btn btn-outline-warning" type="submit">Buscar</button>
-      </form> -->
+<header>
+  <!-- barra de navegacion -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <div class="container-fluid">
+      <img src="favicon.ico" alt="" width="30" height="24">
+      <a class="navbar-brand">FireGames</a>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" >
+            <a class="nav-link " [routerLink]="['inicio']"  [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " [routerLink]="['lista-de-juegos']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Lista de juegos</a>
+          </li>
+        </ul>
+        <!-- Buscador de juegos -->
+        <!-- <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar juego" aria-label="Search">
+          <button class="btn btn-outline-warning" type="submit">Buscar</button>
+        </form> -->
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
